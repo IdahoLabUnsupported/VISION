@@ -13,10 +13,11 @@ authors:
    affiliation: 1
 
 affiliations:
- - name: Researcher, Idaho National Laboratory, USA
+ - name: Idaho National Laboratory, USA
    index: 1
+   ror: 00ty2a548
 
-date: 31 October 2024
+date: 30 June 2025
 bibliography: paper.bib
 
 ---
@@ -44,12 +45,17 @@ These new features were tested in the development of an international transurani
 
 
 # Acknowledgements
-Researchers
+Many researchers have been involved in the development of this model from its initial release through to the current version.  In no particular order, this includes 
  - Brent Dixon
  - Jake Jacobson
  - Gretchen Matthern
  - Steven Piet
+ - Benjamin Baker
+ - Joseph Grimm
+ - Christopher Laws
+ - Robert Jeffers
+ - David Shropshire
 
- Support for development has been provided by XXXX under contract number YYYY
+ This work was supported by the U.S. Department of Energy (DOE), Office of Nuclear Energy’s Systems Analysis and Integration Campaign and performed by Battelle Energy Alliance, LLC under Contract No. DE-AC07-05ID1451 with the US Department of Energy.
 
  # References
