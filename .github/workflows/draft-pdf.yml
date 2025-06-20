@@ -14,21 +14,13 @@ jobs:
           journal: joss
           # This should be the path to the paper within your repo.
           paper-path: Paper/Paper.md
-
-      - run: echo hello > test.txt
-      - name: Upload dummy file
-        uses: actions/upload-artifact@v4
-        with:
-          name: test.txt
-          path: test.txt
-          if-no-files-found: error
           
-      - name: Upload
+      - name: Upload PDF
         uses: actions/upload-artifact@v4
         with:
           name: paper
           # This is the output path where Pandoc will write the compiled
           # PDF. Note, this should be the same directory as the input
           # paper.md
-          path: paper.pdf
+          path: Paper.pdf
           if-no-files-found: error
