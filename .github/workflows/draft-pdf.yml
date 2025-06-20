@@ -14,13 +14,16 @@ jobs:
           journal: joss
           # This should be the path to the paper within your repo.
           paper-path: Paper/Paper.md
-      if test -f "Paper/Paper.pdf"; then
-        echo "Paper exists"
-      else
-        echo "PAPER NOT FOUND"
-      fi
-      # print out the contents of the paper directory as a diagnostic measure
-          
+
+      - name: Check file existence
+        id: check_files
+        uses: andstor/file-existence-action@v1
+        with:
+          files: Paper/Paper.pdf
+      - name: File exists
+        if: steps.check.files.outputs.file_exists == "true"
+        run: echo "PDF file exists"
+        
       - name: Upload
         uses: actions/upload-artifact@v4
         with:
