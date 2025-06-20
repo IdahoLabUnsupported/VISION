@@ -21,7 +21,7 @@ jobs:
         with:
           files: Paper/Paper.pdf
       - name: File exists
-        if: steps.check.files.outputs.file_exists == "true"
+        if: steps.check.files.outputs.file_exists == 'true'
         run: echo "PDF file exists"
         
       - name: Upload
