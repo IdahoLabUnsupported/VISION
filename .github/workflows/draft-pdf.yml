@@ -14,7 +14,15 @@ jobs:
           journal: joss
           # This should be the path to the paper within your repo.
           paper-path: Paper/Paper.md
-        
+
+      - run: echo hello > Paper/test.txt
+      - name: Upload dummy file
+        uses: actions/upload-artifact@v4
+        with:
+          name: Paper/test.txt
+          path: Paper/
+          if-no-files-found: error
+          
       - name: Upload
         uses: actions/upload-artifact@v4
         with:
