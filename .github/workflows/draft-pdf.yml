@@ -14,21 +14,13 @@ jobs:
           journal: joss
           # This should be the path to the paper within your repo.
           paper-path: Paper/Paper.md
-
-      - name: Check file existence
-        id: check_files
-        uses: andstor/file-existence-action@v1
-        with:
-          files: Paper/Paper.pdf
-      - name: File exists
-        if: steps.check.files.outputs.file_exists == 'true'
-        run: echo "PDF file exists"
         
       - name: Upload
         uses: actions/upload-artifact@v4
         with:
-          name: Paper
+          name: paper
           # This is the output path where Pandoc will write the compiled
           # PDF. Note, this should be the same directory as the input
           # paper.md
-          path: Paper.pdf
+          path: paper.pdf
+          if-no-files-found: error
